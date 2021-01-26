@@ -1,25 +1,55 @@
 -> Take yourself to the mansion directory.
+cd mansion
 -> Confirm that you are in fact in that directory.
+pwd
 -> See what directories are in the mansion. (These directories represent areas you will explore.)
+east_wing  entry_hall west_wing
 -> Go into the entryway.
+cd entry_hall
 -> What does the entryway contain?
+coat_closet
 -> Go into the coat closet. What's in there?
+fur_coat.txt       leather_jacket.txt
 -> Take your coat off by making a new text file in the coat closet.
+touch coatOff
 -> From the coat closet, go back to the entryway.
+cd ..
 -> From the entryway, go back to the mansion.
+cd ..
 -> Go to the east wing and see what's in there.
+dining_room   guest_bedroom
 -> Go into the dining room and see what's in there.
+cd dining_room
 -> Remove the sandwich file from the dining room.
+rm -rf sandwich.txt
 -> We need more chairs in the dining room. Create 4 total chairs by copying the chair file. Give the copies names like chair_2, etc.
+cp chair.txt chair2 
+ls 
+chair.txt  chair2.txt chair3.txt chair4.txt table.txt
 -> Go from the dining room to the guest bedroom in a single command. What's in the guest bedroom?
+cd ../guest_bedroom
 -> Go from the guest bedroom back to the mansion in a single command.
+cd ../..
 -> Go to the master bedroom in the west wing in a single command.
+cd west_wing/master_bedroom
 -> See what's in the master bedroom. Are there any hidden files or folders?
+ls -a
+.               .secret_passage dresser.txt     text.txt
+..              bed.txt         mirror.txt
 -> Break the mirror by renaming it to smashed_mirror.txt.
+mv mirror.txt smashed_mirror.txt
 -> Create a directory called cardboard_box.
+mkdir cardboard_box
 -> Move the smashed_mirror into the cardboard_box.
+mv smashed_mirror.txt cardboard_box
 -> Go into the secret passage. What's in there?
+.family_heirloom.txt
 -> Move the family heirloom up into the master bedroom.
+mv /code/sei125/w1/d1/intro_to_command_line/mansion/west_wing/master_bedroom/.secret_passag/ .family_heirloom.txt 
+/code/sei125/w1/d1/intro_to_command_line/mansion/west_wing/master_bedroom
 -> Destroy the secret passage.
+rm -rf .secret_passage
 -> Go up 2 levels. Where are you now?
+mansion
 -> Go back to the mansion.
+Already there
